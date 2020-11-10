@@ -1,5 +1,5 @@
 Felipe Felix Arias is a Ph.D. student at the University of Illinois at Urbana-Champaign (UIUC),
-where he works on motion/path planning in Dr. Nancy M. Amato's group. He received his B.S. in 
+where he works on mobile robot cognition and navigation in Dr. Nancy M. Amato's group. He received his B.S. in 
 Computer Science with Honors from UIUC in 2019 and worked as an undergraduate researcher at UIUC, Stanford, 
 and the University of California, Berkeley. Having moved to the United States from Bolivia at 
 the age of twelve, Felipe is committed to advocating for diversity in higher education and helping 
