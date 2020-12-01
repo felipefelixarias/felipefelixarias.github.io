@@ -45,21 +45,21 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           
-          <tr onmouseout="porlight_stop()" onmouseover="porlight_start()">
+          <tr onmouseout="acprm_stop()" onmouseover="acprm_start()">
             <td style="padding:20px;width:20px;vertical-align:middle">
               <div class="one">
-                <div class="two" id='porlight_image'><img src='images/second_robot.jpg'></div>
-                <img src='images/first_robot.jpg'>
+                <div class="two" id='acprm_image'><img src='images/acprm_2.png'></div>
+                <img src='images/acprm_1.png'>
               </div>
               <script type="text/javascript">
-                function porlight_start() {
-                  document.getElementById('porlight_image').style.opacity = "1";
+                function acprm_start() {
+                  document.getElementById('acprm_image').style.opacity = "1";
                 }
 
-                function porlight_stop() {
-                  document.getElementById('porlight_image').style.opacity = "0";
+                function acprm_stop() {
+                  document.getElementById('acprm_image').style.opacity = "0";
                 }
-                porlight_stop()
+                acprm_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
@@ -67,8 +67,110 @@
                 <papertitle>Avoidance Critical Probabilistic Roadmaps for Motion Planning in Dynamic Environments</papertitle>
               </a>
               <br>
+              <strong>Felipe Felix Arias</strong>,
+              <a href="http://brianichter.com/">Brian Ichter</a>,
+              <a href="https://www.afaust.info/">Aleksandra Faust</a>,
+              <a href="https://parasollab.web.illinois.edu/people/amato/">Nancy M. Amato</a>
+              <br>
+              Submitted to <em>ICRA</em>, 2021  
+              <br>
+              <p>The ability to identify regions critical to obstacle avoidance from local features can be used in a variety of ways. In this work, we leverage a self-supervised model to construct probabilistic roadmaps well suited for dynamic environment navigation.</p>
+            </td>
+          </tr>
+            
+          <tr onmouseout="multi_pers_stop()" onmouseover="multi_pers_start()">
+            <td style="padding:20px;width:20px;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='multi_pers_image'><img src='images/multi_pers_2.png'></div>
+                <img src='images/multi_pers_1.png'>
+              </div>
+              <script type="text/javascript">
+                function multi_pers_start() {
+                  document.getElementById('multi_pers_image').style.opacity = "1";
+                }
+
+                function multi_pers_stop() {
+                  document.getElementById('multi_pers_image').style.opacity = "0";
+                }
+                multi_pers_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="multi-perspective-navigation/index.html">
+                <papertitle>Multi-Perspective Navigation using RL</papertitle>
+              </a>
+              <br>
+              <strong>Felipe Felix Arias</strong>,
+              <a href="https://www.victorgonzalez.info/">Victor Gonzalez</a>
+              <br>
               <p></p>
-              <p>We propose a self-supervised methodology for learning to identify regions relevant to obstacle avoidance from local environment features. As an application of this concept, we leverage a neural network to generate hierarchical probabilistic roadmaps termed Avoidance Critical Probabilistic Roadmaps (ACPRM). These roadmaps contain motion structures that enable efficient obstacle avoidance, reduce the search and planning space, and increase a roadmap's reusability and coverage.</p>
+              <p>Mutiple viewpoints should provide additional information for reinforcement learning-based navigation, this work is the first step towards determining the best way to leverage the cameras of all the agents in the scene.</p>
+            </td>
+          </tr>
+            
+            
+          <tr onmouseout="video_sensor_stop()" onmouseover="video_sensor_start()">
+            <td style="padding:20px;width:20px;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='video_sensor_image'><img src='images/video_sensor_2.gif'></div>
+                <img src='images/video_sensor_1.png'>
+              </div>
+              <script type="text/javascript">
+                function video_sensor_start() {
+                  document.getElementById('video_sensor_image').style.opacity = "1";
+                }
+
+                function video_sensor_stop() {
+                  document.getElementById('video_sensor_image').style.opacity = "0";
+                }
+                video_sensor_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="video-as-a-sensor/index.html">
+                <papertitle>Video as a Sensor for Urban Risk</papertitle>
+              </a>
+              <br>
+              <strong>Felipe Felix Arias</strong>,
+              <a href="https://danrcarmody.com/">Daniel Carmody</a>,
+              <a href="http://publish.illinois.edu/r-sowers/">Richard Sowers</a>, 
+              <a href="https://www.linkedin.com/in/jayati-singh">Jayati Singh</a>,
+              <a href=".">Kevin So</a>
+              <br>
+              <p></p>
+              <p>Risky events are subjective and hard to detect due to the lack of real-world training data. We use weak-supervision and heuristics to track human behavior in the roadways, assess risk, and detect areas that may need more law enforcement or traffic signs.</p>
+            </td>
+          </tr>
+            
+            
+          <tr onmouseout="multi_sent_stop()" onmouseover="multi_sent_start()">
+            <td style="padding:20px;width:20px;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='multi_sent_image'><img src='images/multi_sent_2.gif'></div>
+                <img src='images/multi_sent_1.png'>
+              </div>
+              <script type="text/javascript">
+                function multi_sent_start() {
+                  document.getElementById('multi_sent_image').style.opacity = "1";
+                }
+
+                function multi_sent_stop() {
+                  document.getElementById('multi_sent_image').style.opacity = "0";
+                }
+                multi_sent_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="multi-perspective-navigation/index.html">
+                <papertitle>Weakly-Supervised Multi-Sentence Relation Extraction</papertitle>
+              </a>
+              <br>
+              <strong>Felipe Felix Arias</strong>,
+              <a href="https://ajratner.github.io/">Alex Ratner</a>,
+              <a href="https://cs.stanford.edu/~chrismre/">Christopher Ré</a>
+              <br>
+              <p></p>
+              <p>A combination of heuristics can be used to train a neural network that can classify semantic relationships in text as well as one trained with hand-labeled data. We develop a metholodogy and custom heuristics for extracting relationships across multiple sentences.</p>
             </td>
           </tr>
 
