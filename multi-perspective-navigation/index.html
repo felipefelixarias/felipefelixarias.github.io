@@ -172,7 +172,9 @@
 
                   <td align=center width=100px>
                     <center>
-                        <span style="font-size:22px"><a href='' target="_blank"> [Code **Soon**]</a></span>
+                        <span style="font-size:22px"><a href='Multi_Perspective_Report.pdf' target="_blank"> [Technical Report]</a></span>
+
+                        <span style="font-size:22px"><a href='' target="_blank"> [Code **Coming Soon**]</a></span>
                     </center>
                   </td>
 
@@ -184,40 +186,51 @@
       <table align=center width=850px>
           <tr>
               <td style="font-size:15pt; text-align:justify">
-                  We extend the existing vision-based navigation state of the art to take in inputs from multiple agents/perspectives
+                  We extend the existing vision-based navigation state-of-the-art to take in inputs from multiple agents/perspectives.
               </td>
           </tr>
-          <tr>
-              <td>
-                  <br>
-                  <center>
-<!--                        <img class="round" width="1240px" src="cs543.mp4"/>-->
-                      <video class="round" width="700" src="cs543.mp4"/>
-                  </center>
-                  <br>
-              </td>
-          </tr>
+            <tr>
+                <td>
+                    <center>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EnYwCX5E9gk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </center>
+                </td>
+            </tr>
+
       </table>
 
       <hr>
 
       <table align=center width=850px>
-          <tr><td><center><h1>Using reinforcement learning for vision-based navigation</h1></center></td></tr>
+          <tr><td><center><h1>Overview</h1></center></td></tr>
+
           <tr>
-            <td style="font-size:15pt; text-align:justify">
-<!--                Avoidance Criticality is... https://youtu.be/IVZNnGkLUk0-->
-<!--                TODO-->
-            </td>
-          </tr>
-          <tr>
+              <td style="font-size:15pt; text-align:justify">
+                    Visual navigation is the process by which camera-equipped robots find collision free paths to desired locations relying only on their camera input. Despite being an often studied problem, it is difficult for deep-learning algorithms to solve due to the size of the state space, partial observality, and the reliability of reinforcement learning algorithms. In this work, we extend popular visual navigation algorithms to include perspectives from two robots rather than one during learning. Usually, the problem is defined from the perspective of the robot that is trying to reach the goal observation (whether it be an explicit image or a semantic description). However, we propose that taking advantage of the camera input of multiple robots could help the learning process due to the additional information a third person perspective provides. In summary, we explore the usage of a third person perspective during visual navigation, propose a new, non-egocentric, goal definition for visual navigation, and show that visual-navigation from a third person perspective is possible in the context of deep reinforcement learning.              </td>
+          </tr>         
+          <br>
+        <tr>
               <td>
                   <center>
-<!--                        <img class="round" width="600px" src="second_robot.png"/>-->
-                      <video class="round" width="700" src="cs543.mp4"/>
+                    <img class="round" width="200px" src="normal0.png"/>
+                    <img class="round" width="200px" src="seg0.png"/>
+                    <img class="round" width="200px" src="dep0.png"/>
+                    <br>
+                    <img class="round" width="200px" src="normal1.png"/>
+                    <img class="round" width="200px" src="seg1.png"/>
+                    <img class="round" width="200px" src="dep1.png"/>
 
                   </center>
               </td>
-          </tr>
+          </tr>        
+          
+          <tr>
+              <td style="font-size:15pt; text-align:justify">
+                    Sample RGB, segmentation, and depth images (respectively). Both views are in the same environment, the bottom row is from the third-person perspective (a second robot) and the top is from the first-person perspective (robot seen in bottom row).  
+              </td>
+          </tr>     
+          
+
         </table>
       <br>
 

@@ -188,10 +188,17 @@
     <br>
       <table align=center width=850px>
           <tr>
+            <td style="font-size:15pt; text-align:justify">
+                We propose a methodology for identifying scenes and compound objects such as cyclists (person + bicycle) to track human
+                behavior in the roadways, assess risk, and detect areas that may need more law enforcement or traffic signs.
+            </td>
+          </tr>
+          
+          <tr>
               <td>
                   <br>
                   <center>
-                        <img class="round" width="1240px" src="pedestrian_crossing.gif"/>
+                        <img class="round" width="500px" src="pedestrian_crossing.gif"/>
                   </center>
                   <br>
               </td>
@@ -210,6 +217,7 @@
           <tr><td><center><h1>Tracking Cyclists</h1></center></td></tr>
           <tr>
             <td style="font-size:15pt; text-align:justify">
+                As a case study, we develop a method for tracking cyclists. While most object detection frameworks fail to label cyclists when the bicycle or person leave the frame, we use a graphical model that assigns probability values to an object's presumed past detections by storing and processing information from previous frames. Below is an enhance version the You Only Look Once object detection neural network (left) and the same detections being passed as inputs to our model (right).
 <!--                hello https://uillinoisedu-my.sharepoint.com/:p:/g/personal/jayati_illinois_edu/EXgqKVH7eKJPmjym-weMKVwBtPSco-bsN_EesTNgdfPxgw?rtime=Er9J-F6V2Eg-->
 <!--TODO-->
             </td>
@@ -224,6 +232,34 @@
           </tr>
         </table>
       <br>
+      
+      <hr>
+
+      <table align=center width=850px>
+          <tr><td><center><h1>Detecting Risk and Weak Supervision</h1></center></td></tr>
+          <tr>
+            <td style="font-size:15pt; text-align:justify">
+                We developed a weak supervision pipeline that generates labels for training data through
+                computer vision, pose, and cross-temporal heuristics and one that assigns risk to object detections
+                based on risk metrics. We used naïve and advanced heuristics for risk such as the object’s
+                relative position and time to collision to generate a risk percentage that combines all heuristics. Through a
+                matrix completion procedure that tracks metrics such as how often the heuristics agree and which one can
+                be trusted most often, the probabilistic labels can be used to train neural networks that outperform those
+                that use majority vote. The video at the top of this page shows our jaywalker detector and below are what our model believed to be the riskiest person detections in the validation set of the Waymo Open Dataset.
+          <tr>
+              <td>
+                  <center>
+                      <img class="round" width="400" src="p_1.png"/>
+                      <img class="round" width="400" src="p_2.png"/>
+                  </center>
+              </td>
+          </tr>                
+<!--                hello https://uillinoisedu-my.sharepoint.com/:p:/g/personal/jayati_illinois_edu/EXgqKVH7eKJPmjym-weMKVwBtPSco-bsN_EesTNgdfPxgw?rtime=Er9J-F6V2Eg-->
+<!--TODO-->
+            </td>
+          </tr>
+
+        </table>
 
       <hr>
 
