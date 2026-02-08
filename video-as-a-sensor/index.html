@@ -1,275 +1,96 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
-<style type="text/css">
-	body {
-		font-family: "Computer Modern Sans", "Titillium Web", sans-serif;
-		font-weight:300;
-		font-size:18px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1100px;
-	}
-	
-	h1 {
-		font-family: "Computer Modern Sans", "Titillium Web", sans-serif;
-		font-size:32px;
-		font-weight:300;
-	}
-	
-	.disclaimerbox {
-		background-color: #eee;		
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
-
-	video.header-vid {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	img {
-    max-width: 100%;
-    max-height: auto;
-}
-
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #208799;
-	}
-	
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-	
-	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		        15px 15px 0 0px #fff, /* The fourth layer */
-		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		        20px 20px 0 0px #fff, /* The fifth layer */
-		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		        25px 25px 0 0px #fff, /* The fifth layer */
-		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
-
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-
-	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
-	
-	.vert-cent {
-		position: relative;
-	    top: 50%;
-	    transform: translateY(-50%);
-	}
-	
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
-</style>
-  
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
   <head>
-<!--	  	<link rel="shortcut icon" type="image/png" href="./icon.png" />-->
-		<title>Video as a Sensor for Urban Risk</title>
+    <meta charset="utf-8">
+    <title>Video as a Sensor · Felipe Felix Arias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../stylesheet.css">
   </head>
+  <body class="project-page">
+    <div class="site-bg"></div>
+    <main class="page">
+      <nav class="project-nav">
+        <a href="../index.html">← Back to home</a>
+      </nav>
 
-  <body>
-    <br>
-      <center>
-        <span style="font-size:38px">Video as a Sensor<br></span>
-          <br>
-          <table align=center width=700px>
-              <tr>
-                  <td align=center>
-                      <span style="font-size:25px">
-                          <a href="https://felipefelixarias.github.io/">Felipe Felix Arias</a>,
-                          <a href="https://danrcarmody.com/">Daniel Carmody</a>,
-                          <a href="http://publish.illinois.edu/r-sowers/">Richard Sowers</a>, <br>
-                          <a href="https://www.linkedin.com/in/jayati-singh">Jayati Singh</a>,
-                          <a href=".">Kevin So</a>
-                      </span>
-                  </td>
-              </tr>
-              <tr>
-                  <td align="center">
-                      <span style="font-size:22px">
-                          University of Illinois at Urbana-Champaign
-                      </span>
-                      <br>
-                      <br>
-                  </td>
-              </tr>
-          </table>
+      <header class="project-hero">
+        <div>
+          <p class="eyebrow">Urban Risk · Computer Vision</p>
+          <h1>Video as a Sensor for Urban Risk</h1>
+          <p class="project-text">
+            We combine weak supervision with multi-signal detection to surface risky
+            roadway behavior when labeled data is scarce.
+          </p>
+          <div class="project-meta">
+            <span>Felipe Felix Arias</span>
+            <span>Daniel Carmody</span>
+            <span>Richard Sowers</span>
+            <span>Jayati Singh</span>
+            <span>Kevin So</span>
+          </div>
+          <p class="project-text">University of Illinois at Urbana-Champaign</p>
+        </div>
+        <div class="project-hero-media">
+          <img src="pedestrian_crossing.gif" alt="Pedestrian crossing detection">
+        </div>
+      </header>
 
-<!--
-          <table align=center width=600px>
-              <tr>
--->
-<!--
-                  <td align=center width=140px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://github.com/allenai/cordial-sync' target="_blank"> [Code]</a></span>
-                    </center>
-                  </td>
--->
+      <section class="section">
+        <div class="section-title">
+          <h2>Overview</h2>
+          <p>Risk-aware behavior analysis.</p>
+        </div>
+        <p class="project-text">
+          We identify scenes and compound objects (e.g., cyclist = person + bicycle) and
+          track behavior over time to estimate risk in urban settings. The pipeline
+          blends vision signals, heuristics, and weak supervision to generate labels
+          at scale.
+        </p>
+      </section>
 
-<!--	  	              <td align=center width=150px>-->
-<!--	  					<center>-->
-<!--	  						<span style="font-size:22px"><a href='./index.html' target="_blank"> [Slides]</a></span>-->
-<!--		  		  		</center>-->
-<!--		  		  	  </td>-->
+      <section class="section">
+        <div class="section-title">
+          <h2>Tracking Cyclists</h2>
+          <p>Preserving identity through occlusion.</p>
+        </div>
+        <p class="project-text">
+          Standard detectors drop cyclists when person or bicycle leaves the frame. We
+          infer missing detections using temporal context to improve continuity.
+        </p>
+        <div class="media-row">
+          <div class="media-card">
+            <img src="original_bike.gif" alt="Original cyclist detections">
+            <p>Baseline detector.</p>
+          </div>
+          <div class="media-card">
+            <img src="truncated_bike.gif" alt="Enhanced cyclist tracking">
+            <p>Enhanced detections with temporal inference.</p>
+          </div>
+        </div>
+      </section>
 
-<!--
-                  <td align=center width=200px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://youtu.be/EnYwCX5E9gk' target="_blank"> [Teaser Video]</a></span>
-                    </center>
-                  </td>
+      <section class="section">
+        <div class="section-title">
+          <h2>Risk Scoring</h2>
+          <p>Weak supervision for rare events.</p>
+        </div>
+        <p class="project-text">
+          We generate probabilistic risk labels from pose, motion, and contextual
+          heuristics, then use matrix completion to weight noisy signals.
+        </p>
+        <div class="media-row">
+          <div class="media-card">
+            <img src="p_1.png" alt="High-risk detection 1">
+          </div>
+          <div class="media-card">
+            <img src="p_2.png" alt="High-risk detection 2">
+          </div>
+        </div>
+      </section>
 
-                  <td align=center width=200px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://youtu.be/xM3auncA06A' target="_blank"> [Detailed Video]</a></span>
-                    </center>
-                  </td>
--->
-
-<!--
-                  <td align=center width=100px>
-                    <center>
-                        <span style="font-size:22px"><a href='' target="_blank"> [Poster **Soon**]</a></span>
-                    </center>
-                  </td>
--->
-
-<!--
-                 </tr>
-              <tr>
-          </table>
--->
-      </center>
-    <br>
-      <table align=center width=850px>
-          <tr>
-            <td style="font-size:15pt; text-align:justify">
-                We propose a methodology for identifying scenes and compound objects such as cyclists (person + bicycle) to track human
-                behavior in the roadways, assess risk, and detect areas that may need more law enforcement or traffic signs.
-            </td>
-          </tr>
-          
-          <tr>
-              <td>
-                  <br>
-                  <center>
-                        <img class="round" width="500px" src="pedestrian_crossing.gif"/>
-                  </center>
-                  <br>
-              </td>
-          </tr>
-          <tr>
-              <td style="font-size:15pt; text-align:justify">
-<!--                  TODO-->
-              </td>
-          </tr>
-
-      </table>
-
-      <hr>
-
-      <table align=center width=850px>
-          <tr><td><center><h1>Tracking Cyclists</h1></center></td></tr>
-          <tr>
-            <td style="font-size:15pt; text-align:justify">
-                As a case study, we develop a method for tracking cyclists. While most object detection frameworks fail to label cyclists when the bicycle or person leave the frame, we use a graphical model that assigns probability values to an object's presumed past detections by storing and processing information from previous frames. Below is an enhance version the You Only Look Once object detection neural network (left) and the same detections being passed as inputs to our model (right).
-<!--                hello https://uillinoisedu-my.sharepoint.com/:p:/g/personal/jayati_illinois_edu/EXgqKVH7eKJPmjym-weMKVwBtPSco-bsN_EesTNgdfPxgw?rtime=Er9J-F6V2Eg-->
-<!--TODO-->
-            </td>
-          </tr>
-          <tr>
-              <td>
-                  <center>
-                      <img class="round" width="400" src="original_bike.gif"/>
-                      <img class="round" width="400" src="truncated_bike.gif"/>
-                  </center>
-              </td>
-          </tr>
-        </table>
-      <br>
-      
-      <hr>
-
-      <table align=center width=850px>
-          <tr><td><center><h1>Detecting Risk and Weak Supervision</h1></center></td></tr>
-          <tr>
-            <td style="font-size:15pt; text-align:justify">
-                We developed a weak supervision pipeline that generates labels for training data through
-                computer vision, pose, and cross-temporal heuristics and one that assigns risk to object detections
-                based on risk metrics. We used naïve and advanced heuristics for risk such as the object’s
-                relative position and time to collision to generate a risk percentage that combines all heuristics. Through a
-                matrix completion procedure that tracks metrics such as how often the heuristics agree and which one can
-                be trusted most often, the probabilistic labels can be used to train neural networks that outperform those
-                that use majority vote. The video at the top of this page shows our jaywalker detector and below are what our model believed to be the riskiest person detections in the validation set of the Waymo Open Dataset.
-          <tr>
-              <td>
-                  <center>
-                      <img class="round" width="400" src="p_1.png"/>
-                      <img class="round" width="400" src="p_2.png"/>
-                  </center>
-              </td>
-          </tr>                
-<!--                hello https://uillinoisedu-my.sharepoint.com/:p:/g/personal/jayati_illinois_edu/EXgqKVH7eKJPmjym-weMKVwBtPSco-bsN_EesTNgdfPxgw?rtime=Er9J-F6V2Eg-->
-<!--TODO-->
-            </td>
-          </tr>
-
-        </table>
-
-      <hr>
-
-        <table style="font-size:14px" align=center>
-        <tr>
-        <td>
-            Website adapted from <a href="https://unnat.github.io/cordial-sync/">Unnat Jain</a>, <a href="https://deanplayerljx.github.io/tabvcr/">Jingxiang Lin</a>, <a href="https://richzhang.github.io/colorization">Richard Zhang</a> and <a href="https://pathak22.github.io/modular-assemblies/">Deepak Pathak</a>.
-        </td>
-        </tr>
-        </table>
-
-</body>
+      <footer class="footer">
+        <p><a href="../index.html">Return to homepage</a></p>
+      </footer>
+    </main>
+  </body>
 </html>

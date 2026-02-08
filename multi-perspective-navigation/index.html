@@ -1,248 +1,74 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
-<style type="text/css">
-	body {
-		font-family: "Computer Modern Sans", "Titillium Web", sans-serif;
-		font-weight:300;
-		font-size:18px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1100px;
-	}
-	
-	h1 {
-		font-family: "Computer Modern Sans", "Titillium Web", sans-serif;
-		font-size:32px;
-		font-weight:300;
-	}
-	
-	.disclaimerbox {
-		background-color: #eee;		
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
-
-	video.header-vid {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	img {
-    max-width: 100%;
-    max-height: auto;
-}
-
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #208799;
-	}
-	
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-	
-	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		        15px 15px 0 0px #fff, /* The fourth layer */
-		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		        20px 20px 0 0px #fff, /* The fifth layer */
-		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		        25px 25px 0 0px #fff, /* The fifth layer */
-		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
-
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-
-	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
-	
-	.vert-cent {
-		position: relative;
-	    top: 50%;
-	    transform: translateY(-50%);
-	}
-	
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
-</style>
-  
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
   <head>
-<!--	  	<link rel="shortcut icon" type="image/png" href="./icon.png" />-->
-		<title>Multi-Perspective Vision-Based Navigation</title>
+    <meta charset="utf-8">
+    <title>Multi-Perspective Navigation · Felipe Felix Arias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../stylesheet.css">
   </head>
+  <body class="project-page">
+    <div class="site-bg"></div>
+    <main class="page">
+      <nav class="project-nav">
+        <a href="../index.html">← Back to home</a>
+      </nav>
 
-  <body>
-    <br>
-      <center>
-        <span style="font-size:38px">Multi-Perspective Vision-Based Navigation<br></span>
-          <br>
-          <table align=center width=700px>
-              <tr>
-                  <td align=center>
-                      <span style="font-size:25px">
-                          <a href="https://felipefelixarias.github.io/">Felipe Felix Arias</a>,
-                          <a href="https://www.victorgonzalez.info/">Victor Gonzalez</a>
-                      </span>
-                  </td>
-              </tr>
-              <tr>
-                  <td align="center">
-                      <span style="font-size:22px">
-                          University of Illinois at Urbana-Champaign
-                      </span>
-                      <br>
-                      <span style="font-size:25px">
-                          Research Project for Computer Vision (CS 543)
-                      </span>
-                      <br>
-                      <br>
-                  </td>
-              </tr>
-          </table>
+      <header class="project-hero">
+        <div>
+          <p class="eyebrow">UIUC · Computer Vision</p>
+          <h1>Multi-Perspective Vision-Based Navigation</h1>
+          <p class="project-text">
+            We extend visual navigation to learn from multiple camera perspectives,
+            adding third-person context to reduce partial observability.
+          </p>
+          <div class="project-meta">
+            <span>Felipe Felix Arias</span>
+            <span>Victor Gonzalez</span>
+          </div>
+          <p class="project-text">University of Illinois at Urbana-Champaign</p>
+          <div class="project-links">
+            <a class="pill" href="Multi_Perspective_Report.pdf">Technical Report</a>
+          </div>
+        </div>
+        <div class="project-hero-media">
+          <img src="arch.png" alt="Multi-perspective navigation architecture">
+        </div>
+      </header>
 
-          <table align=center width=600px>
-              <tr>
-<!--
-                  <td align=center width=140px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://github.com/allenai/cordial-sync' target="_blank"> [Code]</a></span>
-                    </center>
-                  </td>
--->
+      <section class="section">
+        <div class="section-title">
+          <h2>Overview</h2>
+          <p>Third-person context for navigation.</p>
+        </div>
+        <p class="project-text">
+          Visual navigation is hard because agents only see a slice of the world. We
+          fuse first-person and third-person views to learn policies that benefit from
+          shared context.
+        </p>
+      </section>
 
-<!--	  	              <td align=center width=150px>-->
-<!--	  					<center>-->
-<!--	  						<span style="font-size:22px"><a href='./index.html' target="_blank"> [Slides]</a></span>-->
-<!--		  		  		</center>-->
-<!--		  		  	  </td>-->
+      <section class="section">
+        <div class="section-title">
+          <h2>Multi-View Inputs</h2>
+          <p>RGB, segmentation, and depth across two perspectives.</p>
+        </div>
+        <div class="media-grid">
+          <div class="media-card"><img src="normal0.png" alt="RGB view A"></div>
+          <div class="media-card"><img src="seg0.png" alt="Segmentation view A"></div>
+          <div class="media-card"><img src="dep0.png" alt="Depth view A"></div>
+          <div class="media-card"><img src="normal1.png" alt="RGB view B"></div>
+          <div class="media-card"><img src="seg1.png" alt="Segmentation view B"></div>
+          <div class="media-card"><img src="dep1.png" alt="Depth view B"></div>
+        </div>
+        <p class="project-text">
+          Top row: first-person. Bottom row: third-person (second robot) in the same
+          environment.
+        </p>
+      </section>
 
-<!--
-                  <td align=center width=200px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://youtu.be/EnYwCX5E9gk' target="_blank"> [Teaser Video]</a></span>
-                    </center>
-                  </td>
-
-                  <td align=center width=200px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://youtu.be/xM3auncA06A' target="_blank"> [Detailed Video]</a></span>
-                    </center>
-                  </td>
--->
-
-                  <td align=center width=100px>
-                    <center>
-                        <span style="font-size:22px"><a href='Multi_Perspective_Report.pdf' target="_blank"> [Technical Report]</a></span>
-
-                        <span style="font-size:22px"><a href='' target="_blank"> [Code **Coming Soon**]</a></span>
-                    </center>
-                  </td>
-
-                 </tr>
-              <tr>
-          </table>
-      </center>
-    <br>
-      <table align=center width=850px>
-          <tr>
-              <td style="font-size:15pt; text-align:justify">
-                  We extend the existing vision-based navigation state-of-the-art to take in inputs from multiple agents/perspectives.
-              </td>
-          </tr>
-            <tr>
-                <td>
-                    <center>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/EnYwCX5E9gk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </center>
-                </td>
-            </tr>
-
-      </table>
-
-      <hr>
-
-      <table align=center width=850px>
-          <tr><td><center><h1>Overview</h1></center></td></tr>
-
-          <tr>
-              <td style="font-size:15pt; text-align:justify">
-                    Visual navigation is the process by which camera-equipped robots find collision free paths to desired locations relying only on their camera input. Despite being an often studied problem, it is difficult for deep-learning algorithms to solve due to the size of the state space, partial observality, and the reliability of reinforcement learning algorithms. In this work, we extend popular visual navigation algorithms to include perspectives from two robots rather than one during learning. Usually, the problem is defined from the perspective of the robot that is trying to reach the goal observation (whether it be an explicit image or a semantic description). However, we propose that taking advantage of the camera input of multiple robots could help the learning process due to the additional information a third person perspective provides. In summary, we explore the usage of a third person perspective during visual navigation, propose a new, non-egocentric, goal definition for visual navigation, and show that visual-navigation from a third person perspective is possible in the context of deep reinforcement learning.              </td>
-          </tr>         
-          <br>
-        <tr>
-              <td>
-                  <center>
-                    <img class="round" width="200px" src="normal0.png"/>
-                    <img class="round" width="200px" src="seg0.png"/>
-                    <img class="round" width="200px" src="dep0.png"/>
-                    <br>
-                    <img class="round" width="200px" src="normal1.png"/>
-                    <img class="round" width="200px" src="seg1.png"/>
-                    <img class="round" width="200px" src="dep1.png"/>
-
-                  </center>
-              </td>
-          </tr>        
-          
-          <tr>
-              <td style="font-size:15pt; text-align:justify">
-                    Sample RGB, segmentation, and depth images (respectively). Both views are in the same environment, the bottom row is from the third-person perspective (a second robot) and the top is from the first-person perspective (robot seen in bottom row).  
-              </td>
-          </tr>     
-          
-
-        </table>
-      <br>
-
-      <hr>
-
-        <table style="font-size:14px" align=center>
-        <tr>
-        <td>
-            Website adapted from <a href="https://unnat.github.io/cordial-sync/">Unnat Jain</a>, <a href="https://deanplayerljx.github.io/tabvcr/">Jingxiang Lin</a>, <a href="https://richzhang.github.io/colorization">Richard Zhang</a> and <a href="https://pathak22.github.io/modular-assemblies/">Deepak Pathak</a>.
-        </td>
-        </tr>
-        </table>
-
-</body>
+      <footer class="footer">
+        <p><a href="../index.html">Return to homepage</a></p>
+      </footer>
+    </main>
+  </body>
 </html>

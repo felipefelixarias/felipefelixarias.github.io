@@ -1,244 +1,70 @@
-<link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dreampulse/computer-modern-web-font/master/fonts.css">
-<style type="text/css">
-	body {
-		font-family: "Computer Modern Sans", "Titillium Web", sans-serif;
-		font-weight:300;
-		font-size:18px;
-		margin-left: auto;
-		margin-right: auto;
-		width: 1100px;
-	}
-	
-	h1 {
-		font-family: "Computer Modern Sans", "Titillium Web", sans-serif;
-		font-size:32px;
-		font-weight:300;
-	}
-	
-	.disclaimerbox {
-		background-color: #eee;		
-		border: 1px solid #eeeeee;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-		padding: 20px;
-	}
-
-	video.header-vid {
-		height: 140px;
-		border: 1px solid black;
-		border-radius: 10px ;
-		-moz-border-radius: 10px ;
-		-webkit-border-radius: 10px ;
-	}
-	img {
-    max-width: 100%;
-    max-height: auto;
-}
-
-	a:link,a:visited
-	{
-		color: #1367a7;
-		text-decoration: none;
-	}
-	a:hover {
-		color: #208799;
-	}
-	
-	td.dl-link {
-		height: 160px;
-		text-align: center;
-		font-size: 22px;
-	}
-	
-	.layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
-		        15px 15px 0 0px #fff, /* The fourth layer */
-		        15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
-		        20px 20px 0 0px #fff, /* The fifth layer */
-		        20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
-		        25px 25px 0 0px #fff, /* The fifth layer */
-		        25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-	.paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35); /* The top layer shadow */
-
-		margin-left: 10px;
-		margin-right: 45px;
-	}
-
-
-	.layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
-		box-shadow:
-		        0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
-		        5px 5px 0 0px #fff, /* The second layer */
-		        5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
-		        10px 10px 0 0px #fff, /* The third layer */
-		        10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
-		margin-top: 5px;
-		margin-left: 10px;
-		margin-right: 30px;
-		margin-bottom: 5px;
-	}
-	
-	.vert-cent {
-		position: relative;
-	    top: 50%;
-	    transform: translateY(-50%);
-	}
-	
-	hr
-	{
-		border: 0;
-		height: 1px;
-		background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
-	}
-</style>
-  
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
   <head>
-<!--	  	<link rel="shortcut icon" type="image/png" href="./icon.png" />-->
-		<title>Multi-Sentence Relation Extraction</title>
+    <meta charset="utf-8">
+    <title>Multi-Sentence Relation Extraction · Felipe Felix Arias</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../stylesheet.css">
   </head>
+  <body class="project-page">
+    <div class="site-bg"></div>
+    <main class="page">
+      <nav class="project-nav">
+        <a href="../index.html">← Back to home</a>
+      </nav>
 
-  <body>
-    <br>
-      <center>
-        <span style="font-size:38px">Weakly-Supervised Multi-Sentence Relation Extraction<br></span>
-          <br>
-          <table align=center width=700px>
-              <tr>
-                  <td align=center>
-                      <span style="font-size:25px">
-                          <a href="https://felipefelixarias.github.io/">Felipe Felix Arias</a>,
-                          <a href="https://ajratner.github.io/">Alex Ratner</a>,
-                          <a href="https://cs.stanford.edu/~chrismre/">Christopher Ré</a>
-                      </span>
-                  </td>
-              </tr>
-              <tr>
-                  <td align="center">
-                      <span style="font-size:22px">
-                          University of Illinois at Urbana-Champaign,<br>
-                          Stanford University
-                      </span>
-                      <br>
-                      <span style="font-size:25px">
-                          Research Project for the Leadership Alliance 2018
-                      </span>
-                      <br>
-                      <br>
-                  </td>
-              </tr>
-          </table>
+      <header class="project-hero">
+        <div>
+          <p class="eyebrow">Leadership Alliance · 2018</p>
+          <h1>Weakly-Supervised Multi-Sentence Relation Extraction</h1>
+          <p class="project-text">
+            We extend Snorkel to cross-sentence relations using multi-sentence dependency
+            paths with far less annotation.
+          </p>
+          <div class="project-meta">
+            <span>Felipe Felix Arias</span>
+            <span>Alex Ratner</span>
+            <span>Christopher Ré</span>
+          </div>
+          <p class="project-text">University of Illinois at Urbana-Champaign · Stanford University</p>
+          <div class="project-links">
+            <a class="pill" href="stanford_poster.pdf">Poster</a>
+            <a class="pill" href="https://snorkel.ai/">Snorkel</a>
+          </div>
+        </div>
+        <div class="project-hero-media">
+          <img src="snorkel_overview.png" alt="Snorkel overview diagram">
+        </div>
+      </header>
 
-          <table align=center width=600px>
-              <tr>
-<!--
-                  <td align=center width=140px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://github.com/allenai/cordial-sync' target="_blank"> [Code]</a></span>
-                    </center>
-                  </td>
--->
+      <section class="section">
+        <div class="section-title">
+          <h2>Overview</h2>
+          <p>Weak supervision beyond single sentences.</p>
+        </div>
+        <p class="project-text">
+          Most relation extraction models operate on single sentences. We build a
+          multi-sentence dependency heuristic that spans context windows, enabling weak
+          supervision over longer contexts and larger corpora.
+        </p>
+      </section>
 
-<!--	  	              <td align=center width=150px>-->
-<!--	  					<center>-->
-<!--	  						<span style="font-size:22px"><a href='./index.html' target="_blank"> [Slides]</a></span>-->
-<!--		  		  		</center>-->
-<!--		  		  	  </td>-->
+      <section class="section">
+        <div class="section-title">
+          <h2>Method Sketch</h2>
+          <p>Heuristics and structural signals.</p>
+        </div>
+        <div class="media-grid">
+          <div class="media-card"><img src="sliding_window.png" alt="Sliding window view"></div>
+          <div class="media-card"><img src="queue.png" alt="Queue model"></div>
+          <div class="media-card"><img src="union.png" alt="Union heuristic"></div>
+          <div class="media-card"><img src="combintations.png" alt="Heuristic combinations"></div>
+        </div>
+      </section>
 
-<!--
-                  <td align=center width=200px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://youtu.be/EnYwCX5E9gk' target="_blank"> [Teaser Video]</a></span>
-                    </center>
-                  </td>
-
-                  <td align=center width=200px>
-                    <center>
-                        <span style="font-size:22px"><a href='https://youtu.be/xM3auncA06A' target="_blank"> [Detailed Video]</a></span>
-                    </center>
-                  </td>
--->
-
-                  <td align=center width=100px>
-                    <center>
-                        <span style="font-size:22px"><a href='' target="_blank"> [Poster **Coming Soon**]</a></span>
-                    </center>
-                  </td>
-
-                 </tr>
-              <tr>
-          </table>
-      </center>
-    <br>
-      <table align=center width=850px>
-          <tr>
-              <td style="font-size:15pt; text-align:justify">
-                    We extend the natural language processing abilities of Snorkel, a system for rapidly creating training data, to include cross-
-                    sentence n-ary relation extraction. A vast majority of the work on relation extraction, the task of extracting
-                    semantic relationships between two or more entities, has concentrated on single sentences. Therefore, we use a drug-disease
-                    causation dataset with labels for multi-sentence relations to test how a weakly supervised model
-                    could perform against one trained with hand-made labels. We propose a novel heuristic that looks for the keywords within a custom multi-
-                    sentence dependency tree. By searching along the path defined by the syntactic relationships (e.g., subject,
-                    determinant, classifier) between the drug and disease our model is able to perform as well as models trained with hand-labeled data.
-              </td>
-          </tr>
-            <tr>
-              <td>
-                  <br>
-                  <center>
-                    <img class="round" width="1200px" src="snorkel_overview.png"/>
-                  </center>
-                  <br>
-              </td>
-          </tr>
-      </table>
-
-      <hr>
-
-      <table align=center width=850px>
-          <tr><td><center><h1>Results</h1></center></td></tr>
-          <tr>
-            <td style="font-size:15pt; text-align:justify">
-                Under Construction...
-<!--TODO-->
-            </td>
-          </tr>
-<!--
-          <tr>
-              <td>
-                  <center>
-                        <img class="round" width="600px" src="second_robot.png"/>
-                    <img class="round" width="1400px" src="snorkel_overview.png"/>
-
-                  </center>
-              </td>
-          </tr>
--->
-        </table>
-      <br>
-
-      <hr>
-
-        <table style="font-size:14px" align=center>
-        <tr>
-        <td>
-            Website adapted from <a href="https://unnat.github.io/cordial-sync/">Unnat Jain</a>, <a href="https://deanplayerljx.github.io/tabvcr/">Jingxiang Lin</a>, <a href="https://richzhang.github.io/colorization">Richard Zhang</a> and <a href="https://pathak22.github.io/modular-assemblies/">Deepak Pathak</a>.
-        </td>
-        </tr>
-        </table>
-
-</body>
+      <footer class="footer">
+        <p><a href="../index.html">Return to homepage</a></p>
+      </footer>
+    </main>
+  </body>
 </html>
