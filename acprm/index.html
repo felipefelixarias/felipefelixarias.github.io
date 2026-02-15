@@ -10,16 +10,18 @@
     <div class="site-bg"></div>
     <main class="page">
       <nav class="project-nav">
-        <a href="../index.html">← Back to home</a>
+        <a href="../index.html">&larr; Back to home</a>
       </nav>
 
       <header class="project-hero">
         <div>
-          <p class="eyebrow">ICRA 2021</p>
-          <h1>Avoidance Critical Probabilistic Roadmaps</h1>
+          <p class="eyebrow">IEEE ICRA 2021</p>
+          <h1>Self-Supervised Data Labeling via Simulation for Multi-Agent Planning</h1>
           <p class="project-text">
-            We learn avoidance-critical regions from local cues and use them to build
-            sparse, reusable roadmaps for dynamic, multi-agent planning.
+            We generate training labels automatically from simulated collision events,
+            distill them into spatial regression models, and use the learned regions to
+            build roadmaps that are 5x faster than sampling baselines in dynamic,
+            multi-agent environments.
           </p>
           <div class="project-meta">
             <span>Felipe Felix Arias</span>
@@ -27,9 +29,9 @@
             <span>Aleksandra Faust</span>
             <span>Nancy M. Amato</span>
           </div>
-          <p class="project-text">University of Illinois at Urbana-Champaign · Google Brain</p>
+          <p class="project-text">UIUC Parasol Lab &middot; Google Brain</p>
           <div class="project-links">
-            <a class="pill" href="https://research.google/pubs/pub50155/">Paper</a>
+            <a class="pill" href="https://research.google/pubs/pub50155/">Paper (ICRA 2021)</a>
           </div>
         </div>
         <div class="project-hero-media">
@@ -39,23 +41,29 @@
 
       <section class="section">
         <div class="section-title">
-          <h2>Overview</h2>
-          <p>Learning structure for faster planning.</p>
+          <h2>The Problem</h2>
+          <p>Planning in dynamic environments is slow and fragile.</p>
         </div>
         <p class="project-text">
-          Motion planning in dynamic environments is bottlenecked by obstacles and
-          narrow passages. We model avoidance-criticality as a learnable signal, train a
-          network to detect it from local features, and use it to generate hierarchical
-          probabilistic roadmaps. The result is faster planning with higher reuse in
-          multi-agent settings.
+          Multi-agent motion planning is bottlenecked by narrow passages and dynamic
+          obstacles. Traditional roadmaps sample uniformly, wasting nodes in open space
+          and under-sampling critical chokepoints. Labeled data for where collisions
+          actually happen is expensive to collect manually.
         </p>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Avoidance Criticality</h2>
-          <p>Spatial context cues from local grids.</p>
+          <h2>Programmatic Data Labeling via Simulation</h2>
+          <p>No manual annotation required.</p>
         </div>
+        <p class="project-text">
+          Instead of hand-labeling, we run thousands of simulated trajectories and
+          automatically extract <strong>avoidance-critical regions</strong>: locations
+          where agents must deviate to avoid collisions. This generates large-scale,
+          spatially-grounded training labels directly from simulation, a form of
+          self-supervised programmatic data labeling.
+        </p>
         <div class="media-grid">
           <div class="media-card">
             <img src="og1.png" alt="Training sample 1">
@@ -68,26 +76,51 @@
           </div>
         </div>
         <p class="project-text">
-          From darkest to lightest: static obstacles, free space, agent origin, avoidance
-          critical region, and goal region.
+          From darkest to lightest: static obstacles, free space, agent origin,
+          avoidance-critical region, and goal region.
         </p>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>ACPRM vs. MAPRM</h2>
-          <p>Sparser graphs without sacrificing coverage.</p>
+          <h2>Model Distillation</h2>
+          <p>Learn structure, then plan with it.</p>
+        </div>
+        <p class="project-text">
+          A spatial regression network is trained on the simulation-generated labels to
+          predict avoidance criticality from local occupancy grids. At planning time,
+          the model scores candidate nodes: concentrating the roadmap in regions
+          that matter. The result: sparser graphs with better coverage of critical areas.
+        </p>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Results: ACPRM vs. Baselines</h2>
+          <p>5x faster. Sparser graphs. Better coverage.</p>
         </div>
         <div class="media-row">
           <div class="media-card">
             <img src="acprm_building2.png" alt="ACPRM roadmap">
-            <p>ACPRM generated roadmap.</p>
+            <p><strong>ACPRM</strong>: nodes concentrated in critical regions.</p>
           </div>
           <div class="media-card">
             <img src="maprm.png" alt="MAPRM roadmap">
-            <p>MAPRM baseline roadmap.</p>
+            <p><strong>MAPRM baseline</strong>: uniform sampling wastes nodes.</p>
           </div>
         </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Key Takeaways</h2>
+        </div>
+        <ul class="tight-list">
+          <li><strong>5x speedup</strong> over sampling baselines for multi-agent planning.</li>
+          <li><strong>Zero manual labels</strong>: all training data generated programmatically from simulation.</li>
+          <li><strong>Transferable</strong>: learned models generalize across environments with similar structure.</li>
+          <li>Published at <strong>IEEE ICRA 2021</strong>, co-authored with Google Brain.</li>
+        </ul>
       </section>
 
       <footer class="footer">

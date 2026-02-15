@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Multi-Sentence Relation Extraction · Felipe Felix Arias</title>
+    <title>Programmatic Data Labeling · Felipe Felix Arias</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../stylesheet.css">
   </head>
@@ -10,26 +10,28 @@
     <div class="site-bg"></div>
     <main class="page">
       <nav class="project-nav">
-        <a href="../index.html">← Back to home</a>
+        <a href="../index.html">&larr; Back to home</a>
       </nav>
 
       <header class="project-hero">
         <div>
-          <p class="eyebrow">Leadership Alliance · 2018</p>
-          <h1>Weakly-Supervised Multi-Sentence Relation Extraction</h1>
+          <p class="eyebrow">Stanford Hazy Research &middot; 2018&ndash;2019</p>
+          <h1>Programmatic Data Labeling for Multi-Sentence Relation Extraction</h1>
           <p class="project-text">
-            We extend Snorkel to cross-sentence relations using multi-sentence dependency
-            paths with far less annotation.
+            We extended Snorkel's programmatic labeling framework beyond single sentences,
+            using heuristic labeling functions to generate training data for cross-sentence
+            relation extraction: no manual annotation required. 12% F1 improvement
+            over single-sentence baselines.
           </p>
           <div class="project-meta">
             <span>Felipe Felix Arias</span>
             <span>Alex Ratner</span>
-            <span>Christopher Ré</span>
+            <span>Christopher R&eacute;</span>
           </div>
-          <p class="project-text">University of Illinois at Urbana-Champaign · Stanford University</p>
+          <p class="project-text">UIUC &middot; Stanford University</p>
           <div class="project-links">
             <a class="pill" href="stanford_poster.pdf">Poster</a>
-            <a class="pill" href="https://snorkel.ai/">Snorkel</a>
+            <a class="pill" href="https://snorkel.ai/">Snorkel AI</a>
           </div>
         </div>
         <div class="project-hero-media">
@@ -39,27 +41,49 @@
 
       <section class="section">
         <div class="section-title">
-          <h2>Overview</h2>
-          <p>Weak supervision beyond single sentences.</p>
+          <h2>The Problem</h2>
+          <p>Relations span sentences. Labels don't.</p>
         </div>
         <p class="project-text">
-          Most relation extraction models operate on single sentences. We build a
-          multi-sentence dependency heuristic that spans context windows, enabling weak
-          supervision over longer contexts and larger corpora.
+          Most relation extraction systems assume both entities appear in the same sentence.
+          In practice, key relations often span multiple sentences, and manually labeling
+          cross-sentence examples is expensive and slow. We needed a way to generate
+          training labels programmatically at scale.
         </p>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Method Sketch</h2>
-          <p>Heuristics and structural signals.</p>
+          <h2>Approach: Programmatic Labeling Functions</h2>
+          <p>Heuristics that write labels, not humans.</p>
         </div>
-        <div class="media-grid">
-          <div class="media-card"><img src="sliding_window.png" alt="Sliding window view"></div>
-          <div class="media-card"><img src="queue.png" alt="Queue model"></div>
+        <p class="project-text">
+          Using <a href="https://www.snorkel.org/">Snorkel</a>'s weak supervision framework,
+          we wrote labeling functions: programmatic heuristics based on dependency paths,
+          sliding windows, and structural signals that automatically label multi-sentence
+          entity pairs. Snorkel's noise-aware generative model combines noisy, overlapping
+          labeling functions into probabilistic training labels.
+        </p>
+        <div class="media-row">
+          <div class="media-card"><img src="sliding_window.png" alt="Sliding window heuristic"></div>
+          <div class="media-card"><img src="queue.png" alt="Queue-based labeling"></div>
+        </div>
+        <div class="media-row" style="margin-top: 16px">
           <div class="media-card"><img src="union.png" alt="Union heuristic"></div>
           <div class="media-card"><img src="combintations.png" alt="Heuristic combinations"></div>
         </div>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Results</h2>
+        </div>
+        <ul class="tight-list">
+          <li><strong>+12% F1</strong> over single-sentence extraction baselines via novel multi-sentence labeling functions.</li>
+          <li><strong>Multi-task learning</strong> across sentence spans boosted extraction quality on long-range relations.</li>
+          <li><strong>Zero hand-labeled data</strong>: all training labels generated programmatically from heuristic functions.</li>
+          <li>Collaborated with Alex Ratner (now CEO of <a href="https://snorkel.ai/">Snorkel AI</a>) and Christopher R&eacute;.</li>
+        </ul>
       </section>
 
       <footer class="footer">

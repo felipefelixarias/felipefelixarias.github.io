@@ -10,16 +10,17 @@
     <div class="site-bg"></div>
     <main class="page">
       <nav class="project-nav">
-        <a href="../index.html">← Back to home</a>
+        <a href="../index.html">&larr; Back to home</a>
       </nav>
 
       <header class="project-hero">
         <div>
-          <p class="eyebrow">Urban Risk · Computer Vision</p>
+          <p class="eyebrow">Weak Supervision &middot; Computer Vision</p>
           <h1>Video as a Sensor for Urban Risk</h1>
           <p class="project-text">
-            We combine weak supervision with multi-signal detection to surface risky
-            roadway behavior when labeled data is scarce.
+            Programmatic labeling meets computer vision: we generate risk labels from
+            behavioral heuristics and weak supervision when manual annotation is too
+            expensive, surfacing dangerous roadway events at scale.
           </p>
           <div class="project-meta">
             <span>Felipe Felix Arias</span>
@@ -37,55 +38,64 @@
 
       <section class="section">
         <div class="section-title">
-          <h2>Overview</h2>
-          <p>Risk-aware behavior analysis.</p>
+          <h2>The Problem</h2>
+          <p>Dangerous events are rare. Labels are expensive.</p>
         </div>
         <p class="project-text">
-          We identify scenes and compound objects (e.g., cyclist = person + bicycle) and
-          track behavior over time to estimate risk in urban settings. The pipeline
-          blends vision signals, heuristics, and weak supervision to generate labels
-          at scale.
+          Risky roadway events (near-misses, illegal crossings, cyclist close calls) are
+          rare in dashcam footage but critical to detect. Hand-labeling thousands of hours
+          of video is impractical. We needed a way to generate training labels
+          programmatically from the video signal itself.
         </p>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Tracking Cyclists</h2>
-          <p>Preserving identity through occlusion.</p>
+          <h2>Approach</h2>
+          <p>Heuristic labeling from detection + tracking.</p>
         </div>
         <p class="project-text">
-          Standard detectors drop cyclists when person or bicycle leaves the frame. We
-          infer missing detections using temporal context to improve continuity.
+          We identify compound objects (e.g., cyclist = person + bicycle), track them
+          through occlusion using temporal context, and apply behavioral heuristics
+           (proximity, velocity, trajectory) to generate probabilistic risk
+          labels. Matrix completion weights the noisy signals into usable training data.
         </p>
+      </section>
+
+      <section class="section">
+        <div class="section-title">
+          <h2>Cyclist Tracking</h2>
+          <p>Recovering identity through occlusion.</p>
+        </div>
         <div class="media-row">
           <div class="media-card">
             <img src="original_bike.gif" alt="Original cyclist detections">
-            <p>Baseline detector.</p>
+            <p><strong>Baseline</strong>: drops cyclist when partially occluded.</p>
           </div>
           <div class="media-card">
             <img src="truncated_bike.gif" alt="Enhanced cyclist tracking">
-            <p>Enhanced detections with temporal inference.</p>
+            <p><strong>Ours</strong>: temporal inference recovers missed detections.</p>
           </div>
         </div>
       </section>
 
       <section class="section">
         <div class="section-title">
-          <h2>Risk Scoring</h2>
+          <h2>Risk Detection</h2>
           <p>Weak supervision for rare events.</p>
         </div>
-        <p class="project-text">
-          We generate probabilistic risk labels from pose, motion, and contextual
-          heuristics, then use matrix completion to weight noisy signals.
-        </p>
         <div class="media-row">
           <div class="media-card">
-            <img src="p_1.png" alt="High-risk detection 1">
+            <img src="p_1.png" alt="High-risk scene 1">
           </div>
           <div class="media-card">
-            <img src="p_2.png" alt="High-risk detection 2">
+            <img src="p_2.png" alt="High-risk scene 2">
           </div>
         </div>
+        <p class="project-text">
+          Probabilistic risk labels generated from pose, motion, and contextual heuristics:
+          no manual annotation required.
+        </p>
       </section>
 
       <footer class="footer">

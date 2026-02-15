@@ -1,7 +1,12 @@
-Felipe Felix Arias is a Ph.D. student at the University of Illinois at Urbana-Champaign (UIUC),
-where he works on mobile robot cognition and navigation in Dr. Nancy M. Amato's group. He received his B.S. in 
-Computer Science with Honors from UIUC in 2019 and worked as an undergraduate researcher at UIUC, Stanford, 
-and the University of California, Berkeley. Having moved to the United States from Bolivia at 
-the age of twelve, Felipe is committed to advocating for diversity in higher education and helping 
-immigrants. Outside of his academic pursuits, he is a multi-instrumentalist that enjoys hiking and 
-photography.
+Felipe Felix Arias is a full-stack LLM engineer at Uber, where he builds GPU training
+infrastructure, GenAI systems, and LLM fine-tuning pipelines on the ML Training team.
+He is also the founder of Marovi AI, a research comprehension and translation platform
+that makes knowledge accessible across languages.
+
+Felipe received his M.S. and B.S. in Computer Science from the University of Illinois
+at Urbana-Champaign, where he was an NSF Graduate Research Fellow in the Parasol Lab
+studying multi-agent motion planning. He has also conducted research at Stanford with
+the Hazy Research group (Snorkel / weak supervision).
+
+Born in La Paz, Bolivia and raised in the United States, Felipe is fluent in English
+and Spanish. Outside of work, he plays guitar, drums, and dances bachata and salsa.
