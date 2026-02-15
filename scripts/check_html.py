@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, field
+from fnmatch import fnmatch
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Dict, List, Tuple
@@ -14,6 +15,7 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 HTML_GLOB = "**/*.html"
 IGNORED_DIR_NAMES = {".git", ".github"}
 IGNORED_SCHEMES = {"http", "https", "mailto", "tel", "javascript", "data"}
+IGNORED_HTML_FILE_PATTERNS = ("google*.html",)
 
 
 @dataclass
@@ -89,6 +91,8 @@ def discover_html_files() -> List[Path]:
   for candidate in REPO_ROOT.glob(HTML_GLOB):
     rel = candidate.relative_to(REPO_ROOT)
     if any(part in IGNORED_DIR_NAMES for part in rel.parts):
+      continue
+    if any(fnmatch(rel.name.lower(), pattern) for pattern in IGNORED_HTML_FILE_PATTERNS):
       continue
     if candidate.is_file():
       html_files.append(candidate)
