@@ -3,13 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Video as a Sensor · Felipe Felix Arias</title>
+    <meta name="author" content="Felipe Felix Arias">
+    <meta name="description" content="Video as a Sensor project page: weak supervision and heuristic labeling for large-scale urban risk detection from video.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="canonical" href="https://felipefelixarias.github.io/video-as-a-sensor/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Video as a Sensor · Felipe Felix Arias">
+    <meta property="og:description" content="Weak supervision for urban risk detection using programmatic labeling, tracking through occlusion, and probabilistic event scoring.">
+    <meta property="og:url" content="https://felipefelixarias.github.io/video-as-a-sensor/">
+    <meta property="og:image" content="https://felipefelixarias.github.io/images/video_sensor_1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Video as a Sensor · Felipe Felix Arias">
+    <meta name="twitter:description" content="Weak supervision for urban risk detection using programmatic labeling, tracking through occlusion, and probabilistic event scoring.">
+    <meta name="twitter:image" content="https://felipefelixarias.github.io/images/video_sensor_1.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/jpeg" href="../images/FelipeFelixArias_circle.jpg">
     <link rel="stylesheet" href="../stylesheet.css">
     <script defer src="../analytics.js"></script>
   </head>
   <body class="project-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <div class="site-bg"></div>
-    <main class="page">
+    <main class="page" id="main-content">
       <nav class="project-nav">
         <a href="../index.html">&larr; Back to home</a>
       </nav>
@@ -33,7 +49,7 @@
           <p class="project-text">University of Illinois at Urbana-Champaign</p>
         </div>
         <div class="project-hero-media">
-          <img src="pedestrian_crossing.gif" alt="Pedestrian crossing detection">
+          <img src="pedestrian_crossing.gif" alt="Pedestrian crossing detection" decoding="async" fetchpriority="high">
         </div>
       </header>
 
@@ -70,11 +86,11 @@
         </div>
         <div class="media-row">
           <div class="media-card">
-            <img src="original_bike.gif" alt="Original cyclist detections">
+            <img src="original_bike.gif" alt="Original cyclist detections" loading="lazy" decoding="async">
             <p><strong>Baseline</strong>: drops cyclist when partially occluded.</p>
           </div>
           <div class="media-card">
-            <img src="truncated_bike.gif" alt="Enhanced cyclist tracking">
+            <img src="truncated_bike.gif" alt="Enhanced cyclist tracking" loading="lazy" decoding="async">
             <p><strong>Ours</strong>: temporal inference recovers missed detections.</p>
           </div>
         </div>
@@ -87,10 +103,10 @@
         </div>
         <div class="media-row">
           <div class="media-card">
-            <img src="p_1.png" alt="High-risk scene 1">
+            <img src="p_1.png" alt="High-risk scene 1" loading="lazy" decoding="async">
           </div>
           <div class="media-card">
-            <img src="p_2.png" alt="High-risk scene 2">
+            <img src="p_2.png" alt="High-risk scene 2" loading="lazy" decoding="async">
           </div>
         </div>
         <p class="project-text">
@@ -100,7 +116,7 @@
       </section>
 
       <footer class="footer">
-        <p><a href="../index.html">Return to homepage</a></p>
+        <p><a href="../index.html">Return to homepage</a> · <a href="../privacy/index.html">Privacy</a></p>
       </footer>
     </main>
   </body>

@@ -31,6 +31,23 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 16px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--bg-strong);
+  color: #f9f5f1;
+  font-weight: 600;
+  z-index: 1000;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 14px;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -567,6 +584,17 @@ h3 {
   margin-top: 48px;
   color: var(--ink-soft);
   font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 @media (max-width: 900px) {

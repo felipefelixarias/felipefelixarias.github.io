@@ -15,3 +15,13 @@ The sync script:
 - Rebuilds from `felipefelixariasresume.tex` if `latexmk` or `tectonic` is installed.
 - Falls back to `../../02-career/resume/FFA_resume.pdf` when no LaTeX compiler is available.
 - Copies the final PDF to `data/FFA_resume.pdf`.
+
+## Site Checks
+
+Run local HTML + internal-link validation:
+
+```bash
+make check-site
+```
+
+GitHub Actions runs the same check on pushes to `master` and pull requests.
