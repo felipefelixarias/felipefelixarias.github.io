@@ -1,7 +1,7 @@
 Felipe Felix Arias is a full-stack LLM engineer at Uber, where he builds GPU training
 infrastructure, GenAI systems, and LLM fine-tuning pipelines on the ML Training team.
-He is also the founder of Marovi AI, a research comprehension and translation platform
-that makes knowledge accessible across languages.
+He is also the founder of Marovi AI, a place to learn AI and machine learning
+in English, Spanish and Chinese.
 
 Felipe received his M.S. and B.S. in Computer Science from the University of Illinois
 at Urbana-Champaign, where he was an NSF Graduate Research Fellow in the Parasol Lab
